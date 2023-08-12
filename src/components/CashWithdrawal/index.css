@@ -1,0 +1,61 @@
+/* Write your CSS here */
+* {
+  font-family: 'roboto';
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.card {
+  background-color: #150b3e;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+}
+.top-section {
+  display: flex;
+  flex-direction: row;
+}
+.letter-container {
+  background-color: #c7d2fe;
+  border-radius: 45px;
+  padding: 20px;
+}
+.letter {
+  color: #7c3aed;
+}
+.name {
+  color: #d4d2db;
+}
+.change {
+  display: flex;
+  justify-content: space-between;
+}
+.blnc-txt {
+  color: #585076;
+  font-size: 20px;
+  text-align: start;
+}
+.blnc {
+  font-weight: bold;
+  color: #d4d2db;
+  text-align: end;
+}
+.rupees {
+  color: #585076;
+  font-size: 10px;
+  text-align: end;
+}
+.draw {
+  font-weight: bold;
+  color: #d4d2db;
+}
+.choose {
+  color: #585076;
+  font-size: 20px;
+  text-align: start;
+  font-weight: normal;
+}
