@@ -5,4 +5,17 @@
 }
 .button-row {
   display: flex;
+  justify-content: space-between;
+}
+button {
+  width: 80px;
+  margin-bottom: 10px;
+  background-color: #382f5a;
+  background-color: ;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #ffffff;
+  color: #ffffff;
+  font-weight: bold;
+  border-width: 1px;
 }

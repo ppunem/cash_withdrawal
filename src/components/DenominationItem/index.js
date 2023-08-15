@@ -1,28 +1,22 @@
-import CashWithdrawal from '../CashWithdrawal'
 import './index.css'
 
 const DenominationItem = props => {
-  const {
-    decreaseFifty,
-    decreaseHundred,
-    decreaseTwoHundred,
-    decreaseFiveHundred,
-  } = props
+  const {decreaseByValue} = props
 
   const fifty = () => {
-    decreaseFifty()
+    decreaseByValue()
   }
 
   const hundred = () => {
-    decreaseHundred()
+    decreaseByValue()
   }
 
   const twoHundred = () => {
-    decreaseTwoHundred()
+    decreaseByValue()
   }
 
   const fiveHundred = () => {
-    decreaseFiveHundred()
+    decreaseByValue()
   }
 
   return (
