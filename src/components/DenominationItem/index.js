@@ -20,7 +20,7 @@ const DenominationItem = props => {
   }
 
   return (
-    <div className="buttons-containerr">
+    <li className="buttons-containerr">
       <div className="button-row">
         <button type="button" onClick={fifty}>
           50
@@ -37,7 +37,7 @@ const DenominationItem = props => {
           500
         </button>
       </div>
-    </div>
+    </li>
   )
 }
 
