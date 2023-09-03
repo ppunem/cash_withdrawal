@@ -2,27 +2,21 @@ import {Component} from 'react'
 import DenominationItem from '../DenominationItem'
 import './index.css'
 
-denominationList = [
-  {id: 1, denomination: 50},
-  {id: 2, denomination: 100},
-  {id: 3, denomination: 200},
-  {id: 4, denomination: 500},
-]
-
 class CashWithdrawal extends Component {
-  state = {amount: 2000}
+    state = {amount: 2000}
+    const {denominationList}=this.props
 
-  decreaseByValue = () => {
-      denominationList.map(each => 
-        if (each.id === id) {
-          this.setState(prevState => ({
-            amount: prevState.amount - each.denomination,
-          }))
+    render() {
+        const {amount} = this.state
+
+    decreaseByValue=()=>{
+        const {amount}=this.state
+        denominationList.map(each=>{
+            if (key===each.id){
+                this.setState(prevState=>{amount:prevState.amount-each.value})
+            }
         })
-  }
-
-  render() {
-    const {amount} = this.state
+    }
 
     return (
       <div className="main-container">
@@ -33,7 +27,7 @@ class CashWithdrawal extends Component {
             </div>
             <p className="name">Sarah Williams</p>
           </div>
-          <div className="chage">
+          <div className="change">
             <p className="blnc-txt">Your Balance</p>
             <p className="blnc">{amount}</p>
           </div>
@@ -42,10 +36,7 @@ class CashWithdrawal extends Component {
           <p className="choose">CHOOSE SUM (IN RUPEES)</p>
           <ul>
             {denominationList.map(eachItem => (
-                <DenominationItem
-                  key={eachItem.id}
-                  decreaseByValue={this.decreaseByValue}
-                />
+              <DenominationItem key={eachItem.id} decreaseByValue={this.decreaseByValue}/>
             ))}
           </ul>
         </div>

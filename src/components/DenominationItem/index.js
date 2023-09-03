@@ -20,7 +20,7 @@ const DenominationItem = props => {
   }
 
   return (
-    <li className="buttons-containerr">
+    <li className="buttons-container">
       <div className="button-row">
         <button type="button" onClick={fifty}>
           50
