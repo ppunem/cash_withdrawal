@@ -4,19 +4,19 @@ import './index.css'
 
 class CashWithdrawal extends Component {
     state = {amount: 2000}
-    const {denominationList}=this.props
-
-    render() {
-        const {amount} = this.state
+    const {denominationsList}=this.props
 
     decreaseByValue=()=>{
         const {amount}=this.state
-        denominationList.map(each=>{
+        denominationsList.map(each=>{
             if (key===each.id){
                 this.setState(prevState=>{amount:prevState.amount-each.value})
             }
         })
     }
+
+    render() {
+        const {amount} = this.state
 
     return (
       <div className="main-container">
