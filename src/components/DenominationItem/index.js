@@ -1,8 +1,8 @@
 import './index.css'
 
 const DenominationItem = props => {
-  const {denominationsList, decreaseByValue} = props
-  const {id, value} = denominationsList
+  const {item, decreaseByValue} = props
+  const {id, value} = item
 
   const decreaseValue = () => {
     decreaseByValue(id)
@@ -12,18 +12,7 @@ const DenominationItem = props => {
     <li className="buttons-container">
       <div className="button-row">
         <button type="button" onClick={decreaseValue}>
-          50
-        </button>
-        <button type="button" onClick={decreaseValue}>
-          100
-        </button>
-      </div>
-      <div className="button-row">
-        <button type="button" onClick={decreaseValue}>
-          200
-        </button>
-        <button type="button" onClick={decreaseValue}>
-          500
+          {value}
         </button>
       </div>
     </li>

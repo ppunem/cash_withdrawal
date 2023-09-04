@@ -1,11 +1,12 @@
 /* Write your CSS here */
 .buttons-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 .button-row {
   display: flex;
   justify-content: space-between;
+  columns: 6;
 }
 button {
   width: 80px;

@@ -5,16 +5,17 @@ import './index.css'
 class CashWithdrawal extends Component {
   state = {amount: 2000}
 
-  decreaseByValue = () => {
+  decreaseByValue = id => {
     const {amount} = this.state
     const {denominationsList} = this.props
 
     denominationsList.map(each => {
-      if (key === each.id) {
+      if (id === each.id) {
         this.setState(prevState => ({
           amount: prevState.amount - each.value,
         }))
       }
+      return amount
     })
   }
 
@@ -43,7 +44,7 @@ class CashWithdrawal extends Component {
               <DenominationItem
                 key={eachItem.id}
                 decreaseByValue={this.decreaseByValue}
-                denominationsList={denominationsList}
+                item={eachItem}
               />
             ))}
           </ul>
