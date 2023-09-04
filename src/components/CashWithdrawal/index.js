@@ -3,20 +3,24 @@ import DenominationItem from '../DenominationItem'
 import './index.css'
 
 class CashWithdrawal extends Component {
-    state = {amount: 2000}
-    const {denominationsList}=this.props
+  state = {amount: 2000}
 
-    decreaseByValue=()=>{
-        const {amount}=this.state
-        denominationsList.map(each=>{
-            if (key===each.id){
-                this.setState(prevState=>{amount:prevState.amount-each.value})
-            }
-        })
-    }
+  decreaseByValue = () => {
+    const {amount} = this.state
+    const {denominationsList} = this.props
 
-    render() {
-        const {amount} = this.state
+    denominationsList.map(each => {
+      if (key === each.id) {
+        this.setState(prevState => ({
+          amount: prevState.amount - each.value,
+        }))
+      }
+    })
+  }
+
+  render() {
+    const {amount} = this.state
+    const {denominationsList} = this.props
 
     return (
       <div className="main-container">
@@ -35,8 +39,12 @@ class CashWithdrawal extends Component {
           <p className="draw">Withdraw</p>
           <p className="choose">CHOOSE SUM (IN RUPEES)</p>
           <ul>
-            {denominationList.map(eachItem => (
-              <DenominationItem key={eachItem.id} decreaseByValue={this.decreaseByValue}/>
+            {denominationsList.map(eachItem => (
+              <DenominationItem
+                key={eachItem.id}
+                decreaseByValue={this.decreaseByValue}
+                denominationsList={denominationsList}
+              />
             ))}
           </ul>
         </div>
